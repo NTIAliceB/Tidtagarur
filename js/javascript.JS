@@ -3,6 +3,7 @@ const timer = document.getElementById('stopwatch');
 var hr = 0;
 var min = 0;
 var sec = 0;
+var mil = 0;
 var stoptime = true;
 
 function startTimer() {
@@ -22,17 +23,24 @@ function timerCycle() {
     sec = parseInt(sec);
     min = parseInt(min);
     hr = parseInt(hr);
+    mil = parseInt(mil);
 
     sec = sec + 1;
 
     if (sec == 60) {
       min = min + 1;
       sec = 0;
+      mil = 0;
     }
     if (min == 60) {
       hr = hr + 1;
       min = 0;
       sec = 0;
+      mil = 0;
+    }
+    if (mil == 60) {
+      sec = sec + 1;
+      mil = 0;
     }
 
     if (sec < 10 || sec == 0) {
@@ -44,22 +52,26 @@ function timerCycle() {
     if (hr < 10 || hr == 0) {
       hr = '0' + hr;
     }
+    if (mil < 10 || mil == 0) {
+      mil = '0' + mil;
+    }
 
-    timer.innerHTML = hr + ':' + min + ':' + sec;
+    timer.innerHTML = hr + ':' + min + ':' + sec + ':' + mil;
 
-    setTimeout("timerCycle()", 1000);
+    setTimeout("timerCycle()", 100);
   }
 }
 
 function resetTimer() {
-    timer.innerHTML = '00:00:00';
+    timer.innerHTML = '00:00:00:00';
     stoptime = true;
     hr = 0;
     sec = 0;
     min = 0;
+    mil = 0;
 }
 
 function saveTime() {
     var tabell = document.querySelector("#verden tbody")
-    tabell.innerHTML += "<tr><td>namn</td><td>" + hr + ":" + min + ":" + sec + "</td></tr>"
+    tabell.innerHTML += "<tr><td>namn</td><td>" + hr + ":" + min + ":" + sec + ":" + mil + "</td></tr>"
 }
