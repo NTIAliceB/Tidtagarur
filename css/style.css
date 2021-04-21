@@ -7,8 +7,6 @@ body {
 button {
     width: 20vh;
     height: 6vh;
-    border: 1000px soldi white;
-    border-radius: 50px;
     background: #202020;
     color: white;
     cursor: pointer;
@@ -29,20 +27,20 @@ button {
    
 }
 #button li {
-    display: inline;
+    list-style-type: none;
     padding-left: 10px;
+    width: 22vh;
 }
 
-#medelvarde {
-    display: flex;
-    justify-content: center;
-    font-size: 10vh;
-    background-color: black;
-    ??
-
-}
 
 #verden {
     display: flex;
     justify-content: center;
+}
+
+#medelvarde {
+    background-color: rgb(161, 165, 159);
+    display: flex;
+    justify-content: center;
+    font-size: 5vh;
 }

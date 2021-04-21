@@ -82,7 +82,10 @@ function resetTimer() {
     min = 0;
     mil = 0;
     objectArrey = []
-    history.go(0);
+}
+
+function refresh() {
+  history.go(0);
 }
 
 function saveTime() {
