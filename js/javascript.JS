@@ -85,7 +85,13 @@ function resetTimer() {
 }
 
 function refresh() {
-  history.go(0);
+  const f = document.getElementById('medelvarde');
+  f.innerHTML = msToTime(0);
+}
+
+function tabortlista() {
+  objectArrey.length = 0;
+  objectArrey.reset();
 }
 
 function saveTime() {
