@@ -13,7 +13,7 @@ function medel() {
   for(let i = 0; i < objectArrey.length; i++) {
     total += objectArrey[i];
   }
-  const m = document.getElementById('medelvarde');
+  var m = document.getElementById('medelvarde');
   m.innerHTML = msToTime(total/objectArrey.length)
 
 }
@@ -82,16 +82,23 @@ function resetTimer() {
     min = 0;
     mil = 0;
     objectArrey = []
+    const med = document.getElementById('medelvarde');
+  med.innerHTML = msToTime(0);
+  const median = document.getElementById('median');
+  median.innerHTML = msToTime(0);
+  var tabell = document.querySelector("#verden tbody").innerHTML = ''
 }
 
-function refresh() {
-  const f = document.getElementById('medelvarde');
-  f.innerHTML = msToTime(0);
+function median() {
+  var arrayLength = objectArrey.length;
+  var resultat = document.getElementById('median');
+  if(arrayLength % 2 == 0){
+  var halva = arrayLength / 2;
+  resultat.innerHTML = msToTime(parseFloat(objectArrey[halva - 1] + objectArrey[halva]) / 2);
+} else {
+  var halva = parseFloat(arrayLength) / 2
+  resultat.innerHTML = msToTime(objectArrey[Math.round(halva) - 1])
 }
-
-function tabortlista() {
-  objectArrey.length = 0;
-  objectArrey.reset();
 }
 
 function saveTime() {
@@ -99,8 +106,16 @@ function saveTime() {
     objectArrey.push(tidimil)
     console.log(objectArrey)
     var tabell = document.querySelector("#verden tbody")
-    tabell.innerHTML += "<tr><td>namn</td><td>" + hr + ":" + min + ":" + sec + ":" + mil + "</td></tr>"
+    tabell.innerHTML += "<tr><td><span class='box' onclick='showTextBox(this)'>namn</span></td><td>" + hr + ":" + min + ":" + sec + ":" + mil + "</td></tr>"
 }
+
+function showTextBox(e) {
+  e.parentNode.innerHTML= "<input class='textbox' type='text' onfocusout='saveName(this)'>"
+}
+
+function saveName(e){
+  e.parentNode.innerHTML = "<span class='box' onclick='showTextBox(this)'>"+ e.value + "</span>"
+  }
 
 function msToTime(duration) {
   var milliseconds = parseInt((duration % 1000) / 100),

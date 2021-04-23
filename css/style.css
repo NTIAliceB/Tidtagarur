@@ -1,6 +1,7 @@
 body {
     background: rgb(183, 189, 181);
     color: white;
+    margin: 0px;
 }
 
 
@@ -36,6 +37,7 @@ button {
 #verden {
     display: flex;
     justify-content: center;
+    font-size: 4vh;
 }
 
 #medelvarde {
@@ -43,4 +45,23 @@ button {
     display: flex;
     justify-content: center;
     font-size: 5vh;
+}
+
+#median {
+    background-color: rgb(139, 143, 137);
+    display: flex;
+    justify-content: center;
+    font-size: 5vh;
+}
+
+.namn {
+    font-size: 6vh;
+}
+
+.textbox {
+    font-size: 4vh;
+}
+
+.box {
+    font-size: 4vh;
 }
