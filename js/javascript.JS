@@ -1,14 +1,14 @@
-const timer = document.getElementById('stopwatch');
+const timer = document.getElementById('stopwatch'); //skapa timern och koppla det till html koden stopwatch
 
-let objectArrey = []
+let objectArrey = [] //skapa en arrey där värderna skrivs ut om man klickar på spara knappen
 
 var hr = 0;
 var min = 0;
 var sec = 0;
-var mil = 0;
-var stoptime = true;
+var mil = 0; //skapa en variabel för milli, sek, min
+var stoptime = true; // vet inte||||||||||||||||||||
 
-function medel() {
+function medel() { // skapa en function för knappen medel
   let total = 0;
   for(let i = 0; i < objectArrey.length; i++) {
     total += objectArrey[i];

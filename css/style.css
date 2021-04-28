@@ -1,8 +1,8 @@
 body {
     background: rgb(183, 189, 181);
     color: white;
-    margin: 0px;
-}
+    margin: 0px; 
+} /* bakgrund färg, color = text färg, */
 
 
 button {
@@ -12,7 +12,7 @@ button {
     color: white;
     cursor: pointer;
     outline: none;
-}
+} /* utseende på knappar och muspekaren*/
 
 #stopwatch {
     font-size: 100px;
@@ -20,48 +20,47 @@ button {
     justify-content: center;
     align-content: center;
     padding-top: 20vh;
-    
-}
+} /*utseende för timer*/
+
 #button {
     display: flex;
     justify-content: center;
-   
-}
+} /*placering av knappar*/
+
 #button li {
     list-style-type: none;
     padding-left: 10px;
     width: 22vh;
-}
-
+} /*mer utseende av knappar*/
 
 #verden {
     display: flex;
     justify-content: center;
     font-size: 4vh;
-}
+} /*utseende för resultat av sparade i listan*/
 
 #medelvarde {
     background-color: rgb(161, 165, 159);
     display: flex;
     justify-content: center;
     font-size: 5vh;
-}
+} /*utseende för medelvärde linjen*/
 
 #median {
     background-color: rgb(139, 143, 137);
     display: flex;
     justify-content: center;
     font-size: 5vh;
-}
+} /*utseende för median linjen*/
 
 .namn {
     font-size: 6vh;
-}
+} /*storlek på titlarna medel och median*/
 
 .textbox {
-    font-size: 4vh;
-}
+    font-size: 3vh;
+} /*storlek på den box man skriver i när man ska ändra namn*/
 
 .box {
     font-size: 4vh;
-}
+} /*storlek på namn boxen i listan/arrey*/
