@@ -8,7 +8,7 @@ var sec = 0;
 var mil = 0; //skapa en variabel för milli, sek, min
 var stoptime = true; // vet inte||||||||||||||||||||
 
-function medel() { // skapa en function för knappen medel
+function medel() { // skapa en function för knappen
   let total = 0;
   for(let i = 0; i < objectArrey.length; i++) {
     total += objectArrey[i];
