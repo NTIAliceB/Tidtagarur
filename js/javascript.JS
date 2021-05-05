@@ -30,7 +30,7 @@ function stopTimer() {
   }
 }
 
-function timerCycle() {
+function timerCycle() { // vet inte||||||||||||||||||||
     if (stoptime == false) {
     sec = parseInt(sec);
     min = parseInt(min);
@@ -66,13 +66,13 @@ function timerCycle() {
     }
     if (mil < 100 || mil == 0) {
       mil = '0' + mil;
-    }
+    } 
 
     timer.innerHTML = hr + ':' + min + ':' + sec + ':' + mil;
 
     setTimeout("timerCycle()", 10);
   }
-}
+} // vet inte||||||||||||||||||||
 
 function resetTimer() {
     timer.innerHTML = '00:00:00:00';
@@ -86,7 +86,7 @@ function resetTimer() {
   med.innerHTML = msToTime(0);
   const median = document.getElementById('median');
   median.innerHTML = msToTime(0);
-  var tabell = document.querySelector("#verden tbody").innerHTML = ''
+  var tabell = document.querySelector("#verden tbody").innerHTML = '' // vet inte||||||||||||||||||||
 }
 
 function median() {
@@ -99,11 +99,11 @@ function median() {
   var halva = parseFloat(arrayLength) / 2
   resultat.innerHTML = msToTime(objectArrey[Math.round(halva) - 1])
 }
-}
+}// vet inte||||||||||||||||||||
 
 function saveTime() {
     var tidimil = parseInt(hr)*60*60*1000 + parseInt(min)*60*1000 + parseInt(sec)*1000 + parseInt(mil)
-    objectArrey.push(tidimil)
+    objectArrey.push(tidimil) // vet inte||||||||||||||||||||
     console.log(objectArrey)
     var tabell = document.querySelector("#verden tbody")
     tabell.innerHTML += "<tr><td><span class='box' onclick='showTextBox(this)'>namn</span></td><td>" + hr + ":" + min + ":" + sec + ":" + mil + "</td></tr>"
@@ -128,4 +128,4 @@ function msToTime(duration) {
   seconds = (seconds < 10) ? "0" + seconds : seconds;
 
   return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-}
+} // vet inte||||||||||||||||||||
