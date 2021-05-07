@@ -113,10 +113,7 @@ function showTextBox(e) {
   e.parentNode.innerHTML= "<input class='textbox' type='text' onfocusout='saveName(this)'>"
 
 }
-namearrey = []
 function saveName(e){
-  namearrey.push(e.value)
-  console.log(namearrey)
   e.parentNode.innerHTML = "<span class='box' onclick='showTextBox(this)'>"+ e.value + "</span>"
   }
 
